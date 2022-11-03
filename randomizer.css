@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: url(images/ambot.png) no-repeat center fixed;
+}
+
+h1,h2,label {
+    text-align: center;
+    color: white;
+}
+
+.container {
+    width: 600px;
+    height: 900px;
+    padding: 40px;
+    border: 1px black;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color:#011522;
+    box-shadow: 0 15px 35px rgba(50,50,50,0.15);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    font-family: 'Cutive Mono', monospace;
+}
+
+.input {
+    max-width: 190px;
+    height: 44px;
+    background-color: #8590f023;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.input:hover, .input:focus, .input-group:hover .input {
+    outline: none;
+    border-color: #ffffff;
+}
+
+.input-group:hover .label, .input:focus {
+    color: white;
+}
+
+.input {
+    color: white;
+}
+
+.tools {
+    display: flex;
+    align-items: top;
+    margin-right: 100%;
+    margin-top: -8%;
+    padding: 10px;
+}
+
+.circle {
+    padding: 0 4px;
+}
+
+.box {
+    display: inline-block;
+    align-items: left;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: #ff605c;
+}
+
+.yellow {
+    background-color: #ffbd44;
+}
+
+.green {
+    background-color: #00ca4e;
+}
+
+button {
+    background-color: #1197cc;
+    box-shadow: #094c66 4px 4px 0px;
+    border-radius: 8px;
+    padding: 15px 10px;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    min-width: 120px;
+    transition: transform 200ms, box-shadow 200ms;
+  }
+  
+  button:active {
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #094c66 0px 0px 0px;
+  }

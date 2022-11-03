@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Student Random Selector</title>
+    <link rel="stylesheet" href="randomizer.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tools">
+            <div class="circle">
+                <span class="red box"></span>
+            </div>
+            <div class="circle">
+                <span class="yellow box"></span>
+            </div>
+            <div class="circle">
+                <span class="green box"></span>
+            </div>
+        </div>
+    <h1>Student Random Selector</h1>
+    <label>Name 1 </label>
+    <input type="text" id="name1" class="input">
+    <br>
+    <label>Name 2 </label>
+    <input type="text" id="name2" class="input">
+    <br>
+    <label>Name 3 </label>
+    <input type="text" id="name3" class="input">
+    <br>
+    <label>Name 4 </label>
+    <input type="text" id="name4" class="input">
+    <br>
+    <h2>Click the button to select 1 name randomly</h2>
+    <br>
+    <button class="" onclick="randomizeName(name1.value,name2.value,name3.value,name4.value)">Click Me</button>
+    <br>
+	<h1 id='output'></h1>
+    </div>
+
+	<script type="text/javascript">
+        document.getElementById('output').innerHTML = "<img src='pp.gif' width ='384' height ='320'>";
+        function randomizeName(name1,name2,name3,name4) {
+
+			const names = [name1, name2, name3, name4];
+            let outro = ["<img src='congrats.gif'>", "<img src='yoda1.gif'>","<img src='clap.gif'>", "<img src='haha.gif'>", "<img src='hehehe.gif'>", "<img src='omg.gif'>"];
+
+            outro.sort(function(){return 0.5 - Math.random()});
+			document.getElementById('output').innerHTML = outro;
+        
+			names.sort(function(){return 0.5 - Math.random()});
+			document.getElementById('output').innerHTML = names;
+
+            // for(let i = names.length -1; i > 0; i--) {    
+			// 	let j = Math.floor(Math.random() * (i+1));
+			// 	let k = names[i];
+			// 	names[i] = names[j];
+			// 	names[j] = k;
+			// }
+			
+			document.getElementById('output').innerHTML = names[0]+"<br><br> Congratulations you are the chosen one <br>"+outro[0];
+            console.log(names);
+        }
+
+
+	</script>
+
+</body>
+</html>
